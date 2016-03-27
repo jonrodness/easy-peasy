@@ -1,31 +1,39 @@
+  <?php get_header(); ?>
+  
+          <!-- loop through all posts -->
+          <?php 
+            $args = array( 'post_type' => 'post' );
+            $the_query = new WP_QUERY( $args );
+          ?>
+          <?php if ( have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
-<?php get_header(); ?>
+            <div class="post-header">
+              <h1>
+                <?php 
+                  $format = 'm/d/Y';
+                  the_date( $format ); 
+                ?>
+              </h1>
+              <h1><?php the_title(); ?></h1>
+            </div>
 
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
-      <div class="container">
+            <div class="post-image">
+                <?php the_post_thumbnail(); ?> 
+            </div>
+            <hr>
 
-        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+          <?php endwhile; else: ?>
 
-          <?php the_content(); ?>
+            <div class="page-header">
+              <h1>Oh no!</h1>
+            </div>
 
-        <?php endwhile; endif; ?>
+          <p>No content is appearing for this page!</p>
 
-      </div>
+          <?php endif; ?>
+
+        </div>
+
     </div>
 
-    <div class="container">
-      <!-- Example row of columns -->
-      <div class="row">
-        <div class="col-md-4">
-          <?php if ( dynamic_sidebar( 'front-left' ) ); ?>
-        </div>   
-        <div class="col-md-4">
-          <?php if ( dynamic_sidebar( 'front-center' ) ); ?>
-        </div>
-        <div class="col-md-4">
-          <?php if ( dynamic_sidebar( 'front-right' ) ); ?>
-        </div>
-      </div>
-
-<?php get_footer(); ?>
+  <?php get_footer(); ?>

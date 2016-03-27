@@ -1,7 +1,17 @@
-       <hr>
+      <div class="col-md-2"></div>
 
       <footer>
-        <p>&copy; <?php bloginfo( 'name' ); ?> <?php echo date('Y'); ?></p>
+<!--   <p id="copyright">&copy; <?php bloginfo( 'name' ); ?> <?php echo date('Y'); ?></p>   -->  
+      <div id="footer-menu" class="nav navbar-nav">
+	        <?php
+		        $args = array(
+		          'menu' => 'footer-menu',
+		          'menu_class' => 'nav navbar-nav',
+		          'container' => 'false'
+		        );
+	          	wp_nav_menu ( $args );
+	        ?>
+    	</div>
       </footer>
     </div> <!-- /container -->
 
@@ -32,5 +42,15 @@
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script>
+    	var $contactItem = $("#footer-menu .contact-item a");
+    	var elementAttributes = {
+    		href : "#contactForm",
+    		"data-toggle" : "modal"
+    	}
+    	$contactItem.attr(elementAttributes);
+	</script>
+
+
   </body>
 </html>

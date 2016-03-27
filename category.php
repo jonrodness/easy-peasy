@@ -1,29 +1,28 @@
 
 <?php get_header(); ?>
 
-     <div class="container">
-        <div class="row row-offcanvas row-offcanvas-right">
-
-          <div class="col-md-9">
-
             <?php include( get_template_directory() . '/sidebar-toggle.php'); ?>
+
+            <h1><?php single_cat_title(); ?></h1>
             
             <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
               <div class="page-header">
-                <h2><?php the_title(); ?></h2>
+                <h1><?php the_title(); ?></h1>
               </div>
 
               <div class="post-image">
                 <?php the_post_thumbnail(); ?> 
               </div>
 
-              <?php the_content(); ?>
+              <div class="post-excerpt">
+                <?php echo get_the_excerpt() ?>
+              </div>
 
             <?php endwhile; else: ?>
 
               <div class="page-header">
-                <h1>Oh no!</h1>
+                <h3>Oh no!</h3>
               </div>
 
             <p>No content is appearing for this page!</p>
@@ -31,8 +30,6 @@
             <?php endif; ?>
 
           </div>
-
-          <?php get_sidebar(); ?>
     
         </div>
 

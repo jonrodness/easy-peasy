@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="<?php bloginfo('template_directory');?>/images/favicon.jpg">
+    <link href='https://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'>    
+    
+    <!-- Custom jQuery functions. Add to functions.php -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
     <title>
       <?php wp_title( '|', true, right ); ?>
@@ -16,28 +20,43 @@
   </head>
 
   <body <?php body_class(); ?>>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="<?php bloginfo( 'url' ); ?>"><?php bloginfo( 'name' ); ?></a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
+    <div class="container">
 
-          <?php
-            $args = array(
-              'menu'        => 'header-menu',
-              'menu_class'  => 'nav navbar-nav',
-              'container'   => 'false'
-            );
-            wp_nav_menu( $args );
-          ?>
-         
-        </div><!--/.navbar-collapse -->
+    <!-- social media buttons -->
+    <div class="social-nav">
+      <ul>
+        <li><a  href ="http://www.twitter.com"> <img src="<?php bloginfo('template_directory');?>/images/Social_Icons/twitter.png" /> </a></li>
+        <li><a  href ="http://www.facebook.com/jenn.goodman.5?fref=ts"> <img src="<?php bloginfo('template_directory');?>/images/Social_Icons/facebook.png" /> </a></li>
+        <li><a  href ="http://www.pinterest.com"> <img src="<?php bloginfo('template_directory');?>/images/Social_Icons/pinterest.png" /> </a></li>
+        <li><a  href ="http://www.instagram.com"> <img src="<?php bloginfo('template_directory');?>/images/Social_Icons/Instagram.png" /> </a></li>
+      </ul>
+    </div>
+
+    <div class="main-navigation">
+      <!-- Display Front Page featured image as site logo -->
+      
+      
+      <?php /* if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>    
+        <?php if ( has_post_thumbnail() ): ?>
+          <div class="site-logo">   
+            <?php the_post_thumbnail(); ?> 
+          </div>
+        <?php endif; ?>
+      <?php endwhile; endif; */ ?>
+
+      <!-- retrieving logo via request -->
+      <div class="site-logo">
+        <a href="<?php echo get_home_url() ?>">
+          <?php echo wp_get_attachment_image ( 86, "377 × 116" ) ?>
+        </a>
       </div>
-    </nav>
+
+
+      <!-- Navbar -->
+      <?php include( get_template_directory(). '/navbar.php'); ?>
+    </div>  
+
+    <div class="content row row-offcanvas row-offcanvas-right">
+
+    <div class="col-md-2"></div>
+    <div class="col-md-8">

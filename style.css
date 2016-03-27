@@ -12,20 +12,13 @@ Text Domain: artist_and_spoon
 This theme, like WordPress, is licensed under the GPL
 */
 
-body {
-  padding-top: 50px;
-  padding-bottom: 20px;
-}
 
-.admin-bar .navbar-fixed-top {
-	margin-top: 30px;
-}
 
 @media (min-width:768px) {
 	.sub-menu {
 		display: none;
 		position: absolute;
-		background: #222;
+		background: #fff;
 		padding: 10px 15px;
 		width: 200px;		
 	}
@@ -46,17 +39,20 @@ body {
 }
 
 .sub-menu a  {
-	color: #999;
+	color: #585858;
 	text-decoration: none;
 }
 
 .sub-menu a:hover  {
-	color: #fff;	
+	color: #000;	
 }	
 
+/* does jenn want this?
 .current-menu-item > a, .current-menu-parent > a {
 	background: #000;	
 }
+*/
+
 .current-menu-parent li a {
 	background: inherit;
 }
@@ -104,6 +100,10 @@ article.post {
 	}
 }
 
+.transparent {
+	opacity: 0.5;
+}
+
 /*
  * Off Canvas
  * --------------------------------------------------
@@ -149,6 +149,54 @@ article.post {
   }
 }
 
+/* Front page content */
+
+.content {
+	background-image: url("images/testWoodBackground.jpg");
+	background-size: 100%;
+	padding-top: 70px;
+}
+
+.content .post-header {
+	background-color: rgb(255, 255, 255);
+}
+
+.content .post-header h1 {
+	vertical-align: middle;
+	display: inline-block;
+	font-family: "Amatic SC";
+	font-size: 30px;
+	font-weight: 700;	
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+/* Posts */
+
+.content .post-header h1:not(:first-child) {
+	margin-left: 30px;
+}
+
+.content .post-header h1:first-child {
+	margin-left: 20px;
+}
+
+.content .post-image {
+	margin-top: 10px;
+	height: 400px;
+	width: 100%;
+	background-color: rgb(255, 255, 255);
+}
+
+.content .post-image img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	border: solid 5px rgb(255, 255, 255);
+}
+
+/* About */
+
 .about-image img {
 	max-width: 50vh;
 	max-height: 50vh;
@@ -156,9 +204,119 @@ article.post {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+}
 
+.main-navigation {
+}
+
+.site-logo {
+	width: 100%;
+}
+
+.site-logo img {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+/* Navbar */
+
+.navbar {
+	background-color: #FFFFFF;
+	border: none;
+	text-align: center;
+	line-height: 0;
+}
+
+.navbar .nav {
+	float: none;
+	display: inline-block;
+	margin: auto;
+}
+
+.navbar.navbar-default.navbar-fixed-top {
+	margin-top: 30px;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	min-height: 20px;
+	border-bottom-color: rgb(231, 231, 231);
+}
+
+.navbar.navbar-default.navbar-fixed-top .navbar-nav>li>a {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-size: 20px;
+}
+
+.main-navigation .nav.navbar-nav>li>a,
+.nav .navbar-nav>li>a,
+.nav .navbar-nav>li>a:hover,
+.nav .navbar-nav>li>a:focus {
+	font-family: "Amatic SC";
+	font-size: 30px;
+	font-weight: 700;
+	background-color: #FFFFFF;
+	color: rgb(0, 0, 0);	
+}
+
+.post-image  {
+	overflow: hidden;
+}
+
+
+.post-header {
+	border-bottom: none;
+}
+
+/* Social buttons */
+.social-nav {
+	margin-top: 20px;
+}
+
+.social-nav ul {
+	text-align: right;
+}
+
+.social-nav img {
+	max-height: 30px;
+	max-width: 30px;
+}
+
+.social-nav li {
+	display: inline;
+}
+
+.social-nav li a:hover {
+	text-decoration: none;
+}
+
+
+/* Footer menu */
+
+footer #copyright {
+	display: inline;
+}
+
+#footer-menu {
+	display: inline-block;
+	float: right;
 }
 
 
 
+/* Sidebar */
 
+.sidebar h3 {
+	text-align: center;
+}
+
+.sidebar ul {
+	list-style-type: none;
+	text-align: center;
+	padding: 0;
+}
+
+.sidebar ul li a {
+	font-family: "Lato";
+	font-size: 20px
+}

@@ -1,21 +1,21 @@
 
+<?php
+/*
+  Template Name: Full Width Template
+*/
+?>
+
 <?php get_header(); ?>
 
      <div class="container">
-        <div class="row row-offcanvas row-offcanvas-right">
+        <div class="row">
 
-          <div class="col-md-9">
-
-            <?php include( get_template_directory() . '/sidebar-toggle.php'); ?>
+          <div class="col-md-12">
             
             <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
               <div class="page-header">
-                <h2><?php the_title(); ?></h2>
-              </div>
-
-              <div class="post-image">
-                <?php the_post_thumbnail(); ?> 
+                <h1><?php the_title(); ?></h1>
               </div>
 
               <?php the_content(); ?>
@@ -31,8 +31,6 @@
             <?php endif; ?>
 
           </div>
-
-          <?php get_sidebar(); ?>
     
         </div>
 

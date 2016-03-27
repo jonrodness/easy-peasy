@@ -2,22 +2,14 @@
 <?php get_header(); ?>
 
      <div class="container">
-        <div class="row row-offcanvas row-offcanvas-right">
+        <div class="row">
 
           <div class="col-md-9">
-
-            <?php include( get_template_directory() . '/sidebar-toggle.php'); ?>
-            
             <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
               <div class="page-header">
-                <h2><?php the_title(); ?></h2>
+                <h1><?php the_title(); ?></h1>
               </div>
-
-              <div class="post-image">
-                <?php the_post_thumbnail(); ?> 
-              </div>
-
               <?php the_content(); ?>
 
             <?php endwhile; else: ?>
@@ -31,9 +23,9 @@
             <?php endif; ?>
 
           </div>
-
-          <?php get_sidebar(); ?>
     
+            <?php get_sidebar(); ?>
+
         </div>
 
 <?php get_footer(); ?>

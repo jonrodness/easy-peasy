@@ -4,9 +4,14 @@
   */
 ?>
 
-<?php get_header(); ?>
-
   <div class="container">
+    <?php get_header(); ?>
+
+    <div class="main-navigation">
+      <!-- Navbar -->
+      <?php include( get_template_directory(). '/navbar.php'); ?>
+    </div>    
+
     <div class="row row-offcanvas row-offcanvas-right">
 
           <div class="col-md-9">
