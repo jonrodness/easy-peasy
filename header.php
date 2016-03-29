@@ -57,6 +57,3 @@
     </div>  
 
     <div class="content row row-offcanvas row-offcanvas-right">
-
-    <div class="col-md-2"></div>
-    <div class="col-md-8">

@@ -1,5 +1,6 @@
   <?php get_header(); ?>
-  
+          <div class="col-md-2"></div>
+          <div class="col-md-8">  
           <!-- loop through all posts -->
           <?php 
             $args = array( 'post_type' => 'post' );

@@ -219,6 +219,42 @@ article.post {
 	margin-left: auto;
 }
 
+
+/* Category Pages */
+
+.category .post-preview {
+	margin-right: auto;
+	margin-left: auto;
+	width: 90%;
+}
+
+.category .post-preview-strip {
+	display: flex;
+	display: -webkit-flex;
+	font-family: Lato;
+}
+
+.category .post-preview .post-image {
+	-webkit-flex: 1;
+	flex: 1;
+	height: auto;
+}
+
+
+.category .post-preview .post-excerpt {
+	-webkit-flex: 4;
+	flex: 4;
+}
+
+.category .post-preview {
+	height: 100%;
+}
+
+.category .page-header {
+	margin: 0;
+}
+
+
 /* Navbar */
 
 .navbar {
@@ -235,7 +271,6 @@ article.post {
 }
 
 .navbar.navbar-default.navbar-fixed-top {
-	margin-top: 30px;
 	border-bottom-style: solid;
 	border-bottom-width: 1px;
 	min-height: 20px;

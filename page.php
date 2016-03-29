@@ -9,16 +9,17 @@
             <?php include( get_template_directory() . '/sidebar-toggle.php'); ?>
             
             <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-
-              <div class="page-header">
-                <h2><?php the_title(); ?></h2>
+              <div class="post-preview">
+                <div class="page-header">
+                  <h2><?php the_title(); ?></h2>
+                </div>
+                <div class="post-image">
+                  <?php the_post_thumbnail(); ?> 
+                </div>
+                <div class="post-content">
+                  <?php the_content(); ?>
+                </div>
               </div>
-
-              <div class="post-image">
-                <?php the_post_thumbnail(); ?> 
-              </div>
-
-              <?php the_content(); ?>
 
             <?php endwhile; else: ?>
 
