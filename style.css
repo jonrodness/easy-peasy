@@ -154,7 +154,10 @@ article.post {
 .content {
 	background-image: url("images/testWoodBackground.jpg");
 	background-size: 100%;
-	padding-top: 70px;
+}
+
+.new-posts-container {
+	padding-top: 70px;	
 }
 
 .content .post-header {
@@ -222,7 +225,7 @@ article.post {
 
 /* Category Pages */
 
-.category .post-preview {
+.category {
 	margin-right: auto;
 	margin-left: auto;
 	width: 90%;
@@ -234,26 +237,53 @@ article.post {
 	font-family: Lato;
 }
 
-.category .post-preview .post-image {
+.category .post-preview {
+	background-color: rgb(255, 255, 255);
+	margin: 10px;
+	padding: 15px;
+	height: 150px;
+	display: flex;
+	display: -webkit-flex;
+	font-family: Lato;	
+}
+
+.category .post-preview-right {
+	-webkit-flex: 4;
+	flex: 4;
+	margin-left: 10px;
+}
+
+.category .post-preview-left {
 	-webkit-flex: 1;
-	flex: 1;
+	flex: 1;	
+}
+
+.category .post-preview .post-image {
 	height: auto;
 }
 
-
-.category .post-preview .post-excerpt {
-	-webkit-flex: 4;
-	flex: 4;
+.category .post-header h1 {
+	margin-top: 5px;
+	margin-bottom: 5px;
 }
 
-.category .post-preview {
-	height: 100%;
+.category .post-header h1:first-child {
+	margin-left: 0;
 }
 
 .category .page-header {
 	margin: 0;
 }
 
+.category-title {
+	margin-bottom: 20px;
+	font-family: "Amatic SC";
+}
+
+.category-title h1 {
+	font-weight: bold;
+	font-size: 50px;	
+}
 
 /* Navbar */
 
