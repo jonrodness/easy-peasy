@@ -9,17 +9,21 @@
           <?php if ( have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
             <div class="post-header">
-              <h1>
+              <h1 class="post-date">
                 <?php 
                   $format = 'm/d/Y';
                   the_date( $format ); 
                 ?>
               </h1>
-              <h1><?php the_title(); ?></h1>
+              <a href="<?php the_permalink(); ?>">
+                <h1 class="post-title"><?php the_title(); ?></h1>
+              </a>
             </div>
 
             <div class="post-image">
-                <?php the_post_thumbnail(); ?> 
+                <a href="<?php the_permalink(); ?>">
+                  <?php the_post_thumbnail(); ?> 
+                </a>
             </div>
             <hr>
 

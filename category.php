@@ -16,19 +16,23 @@
 
                   <div class="post-preview-left">
                     <div class="post-image">
-                      <?php the_post_thumbnail(); ?> 
+                      <a href="<?php the_permalink(); ?>">
+                        <?php the_post_thumbnail(); ?>
+                      </a>
                     </div>
                   </div>
 
                   <div class="post-preview-right">
                     <div class="post-header">
-                      <h1>
-                        <?php 
+                      <h1 class="post-date">
+                        <?php
                           $format = 'm/d/Y';
                           the_date( $format ); 
                         ?>
                       </h1>
-                      <h1><?php the_title(); ?></h1>
+                      <a href="<?php the_permalink(); ?>">
+                        <h1 class="post-title"><?php the_title(); ?></h1>
+                      </a>
                     </div>
                     <div class="post-excerpt">
                        <?php echo get_the_excerpt() ?>

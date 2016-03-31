@@ -154,6 +154,8 @@ article.post {
 .content {
 	background-image: url("images/testWoodBackground.jpg");
 	background-size: 100%;
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 
 .new-posts-container {
@@ -176,12 +178,12 @@ article.post {
 
 /* Posts */
 
-.content .post-header h1:not(:first-child) {
-	margin-left: 30px;
+.content .post-date {
+	margin-left: 20px;
 }
 
-.content .post-header h1:first-child {
-	margin-left: 20px;
+.content .post-title {
+	margin-left: 30px;
 }
 
 .content .post-image {
@@ -240,7 +242,7 @@ article.post {
 .category .post-preview {
 	background-color: rgb(255, 255, 255);
 	margin: 10px;
-	padding: 15px;
+	padding: 5px;
 	height: 150px;
 	display: flex;
 	display: -webkit-flex;
@@ -251,6 +253,8 @@ article.post {
 	-webkit-flex: 4;
 	flex: 4;
 	margin-left: 10px;
+	margin-top: 5px;
+	margin-bottom: 10px;
 }
 
 .category .post-preview-left {
@@ -258,17 +262,9 @@ article.post {
 	flex: 1;	
 }
 
-.category .post-preview .post-image {
-	height: auto;
-}
-
 .category .post-header h1 {
 	margin-top: 5px;
 	margin-bottom: 5px;
-}
-
-.category .post-header h1:first-child {
-	margin-left: 0;
 }
 
 .category .page-header {
@@ -283,6 +279,29 @@ article.post {
 .category-title h1 {
 	font-weight: bold;
 	font-size: 50px;	
+}
+
+.category .post-preview .post-image {
+	margin-top: 0;
+	height: auto;
+	width: auto;
+}
+
+.category .post-image img {
+	width: 200px;
+	height: 140px;
+}
+
+.category .post-title {
+	margin-left: 20px;
+}
+
+.category .post-date {
+	margin-left: 0;
+}
+
+.category .category-title>h1 {
+	margin-top: 0;
 }
 
 /* Navbar */
