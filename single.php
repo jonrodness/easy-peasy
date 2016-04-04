@@ -1,14 +1,11 @@
 
 <?php get_header(); ?>
 
-     <div class="container">
-        <div class="row row-offcanvas row-offcanvas-right">
+    <div class="container">
 
-          <div class="col-md-9">
-
-            <p class="pull-right visible-xs">
-              <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle Sidebar</button>
-            </p>
+          <div class="single-post">
+  
+            <?php  include( get_template_directory() . '/sidebar-toggle.php'); ?>
             
             <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
@@ -19,8 +16,9 @@
                   $thumbnail_url = wp_get_attachment_image_src( $thumbnail_id, 'thumbnail-size', true );
                   $thumbnail_meta = get_post_meta( $thumbnail_id, '_wp_attachment_image_alt', true );
                 ?>
-
-                <p class="featured-image"><img src="<?php echo $thumbnail_url[0]; ?>" alt="<?php echo $thumbnail_meta; ?>"></p>
+                <div class="post-image">
+                  <p class="featured-image"><img src="<?php echo $thumbnail_url[0]; ?>" alt="<?php echo $thumbnail_meta; ?>"></p>
+                </div>
 
                 <h1><?php the_title(); ?></h1>
 
@@ -49,9 +47,8 @@
             <?php endif; ?>
 
           </div>
-    
-            <?php get_sidebar( 'blog' ); ?>
+    </div>
 
-        </div>
+</div>
 
 <?php get_footer(); ?>

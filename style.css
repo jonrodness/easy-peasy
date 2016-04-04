@@ -149,31 +149,38 @@ article.post {
   }
 }
 
-/* Front page content */
+.front-page {
+	/* Need overflow so height works */
+	overflow: hidden;
+	background-image: url("images/testWoodBackground.jpg");
+	background-size: 100%;	
+}
+
+/* Content */
 
 .content {
-	background-image: url("images/testWoodBackground.jpg");
-	background-size: 100%;
 	padding-top: 20px;
-	padding-bottom: 20px;
 }
 
-.new-posts-container {
-	padding-top: 70px;	
+.content .page-header {
+	margin-top: 0;
 }
 
-.content .post-header {
+/* Front page */
+
+.front-page .new-posts-container {
+	padding-top: 40px;	
+}
+
+.front-page .post-image {
+	margin-top: 10px;
+	height: 400px;
+	width: 100%;
 	background-color: rgb(255, 255, 255);
 }
 
-.content .post-header h1 {
-	vertical-align: middle;
-	display: inline-block;
-	font-family: "Amatic SC";
-	font-size: 30px;
-	font-weight: 700;	
-	margin-top: 10px;
-	margin-bottom: 10px;
+.front-page .post-image img {
+	border: solid 5px rgb(255, 255, 255);
 }
 
 /* Posts */
@@ -186,18 +193,25 @@ article.post {
 	margin-left: 30px;
 }
 
-.content .post-image {
-	margin-top: 10px;
-	height: 400px;
-	width: 100%;
-	background-color: rgb(255, 255, 255);
-}
-
 .content .post-image img {
 	display: block;
 	width: 100%;
 	height: 100%;
-	border: solid 5px rgb(255, 255, 255);
+}
+
+.content .post-header {
+	background-color: rgb(255, 255, 255);
+}
+
+.content .post-header h1 {
+	vertical-align: middle;
+	display: inline-block;
+	font-family: "Amatic SC";
+	font-size: 30px;
+	font-weight: 700;	
+	color: rgb(0, 0, 0);	
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 /* About */
@@ -241,8 +255,6 @@ article.post {
 
 .category .post-preview {
 	background-color: rgb(255, 255, 255);
-	margin: 10px;
-	padding: 5px;
 	height: 150px;
 	display: flex;
 	display: -webkit-flex;
@@ -265,10 +277,6 @@ article.post {
 .category .post-header h1 {
 	margin-top: 5px;
 	margin-bottom: 5px;
-}
-
-.category .page-header {
-	margin: 0;
 }
 
 .category-title {
@@ -333,14 +341,17 @@ article.post {
 }
 
 .main-navigation .nav.navbar-nav>li>a,
-.nav .navbar-nav>li>a,
-.nav .navbar-nav>li>a:hover,
-.nav .navbar-nav>li>a:focus {
+.nav.navbar-nav>li>a,
+.nav.navbar-nav>li>a:hover,
+.nav.navbar-nav>li>a:focus {
 	font-family: "Amatic SC";
 	font-size: 30px;
-	font-weight: 700;
 	background-color: #FFFFFF;
 	color: rgb(0, 0, 0);	
+}
+
+.nav.navbar-nav>li>a:hover {
+	font-weight: 700;	
 }
 
 .post-image  {

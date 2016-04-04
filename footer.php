@@ -1,5 +1,3 @@
-      <div class="col-md-2"></div>
-
       <footer>
 <!--   <p id="copyright">&copy; <?php bloginfo( 'name' ); ?> <?php echo date('Y'); ?></p>   -->  
       <div id="footer-menu" class="nav navbar-nav">

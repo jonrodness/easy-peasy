@@ -29,36 +29,40 @@
 <script>
   /* Fix navbar to top of page */
 
-  $(document).ready(function(){
-    var $navbar = $('.navbar');
-    var $navbarTop = $navbar.offset().top;
+  // $(document).ready(function() {
+  //   var $navbar = $('.navbar');
+  //   var $navbarTop = $navbar.offset().top;
 
-    $(window).on('scroll', function() {
-      var scrollTop = $(window).scrollTop();
+  //   var scrollTop = $(window).scrollTop();    
 
-      if (scrollTop > $navbarTop) {
-        $navbar.addClass('navbar-fixed-top');
-        //$navbar.css('opacity', 0.6);
-      }
-      else {
-        $navbar.removeClass('navbar-fixed-top'); 
-        //$navbar.css('opacity', 1);
-      }
-    });
+  //   $(window).on('scroll', function() {
+  //     var navbarHeight = $navbar.height();
+  //     var fixedNavbarTop = $navbar.offset().top;
+  //     var newScrollTop = $(window).scrollTop();
 
-    /* Increase opacity on navbar hover */
-    // $navbar.hover(
-    //   function(){
-    //     if ($(window).scrollTop() > $navbarTop) {
-    //       $(this).css('opacity', 1);
-    //     }
-    //   },
-    //   function(){
-    //     if ($(window).scrollTop() > $navbarTop) {
-    //       $(this).css('opacity', 0.6);
-    //     }
-    //   }
-    // );
-
-  });
+  //     if (scrollTop > $navbarTop) {
+  //       // scrolltop is below logo/navbar
+  //       $navbar.addClass('navbar-fixed-top');        
+        
+  //       if (newScrollTop < scrollTop) {
+  //         // scroll direction is up
+  //         $navbar.animate({
+  //           top: navbarHeight + "px"
+  //         });
+  //       } else {
+  //         //scroll direction is down
+  //         if($navbar.offset().top !== 0) {
+  //           $navbar.animate({
+  //             top: 0
+  //           });
+  //         }
+  //       }
+  //     } else {
+  //       // scrolltop is above logo/navbar        
+  //       $navbar.removeClass('navbar-fixed-top');
+  //     }
+  //     scrollTop = newScrollTop;
+  //   });
+  // });
+  
 </script>
