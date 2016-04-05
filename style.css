@@ -12,7 +12,13 @@ Text Domain: artist_and_spoon
 This theme, like WordPress, is licensed under the GPL
 */
 
+.logo-container {
+	height: 100px;
+}
 
+.logo-container img {
+	height: 50px;
+}
 
 @media (min-width:768px) {
 	.sub-menu {
@@ -27,6 +33,13 @@ This theme, like WordPress, is licensed under the GPL
 		display: block;
 	}
 
+	.logo-container {
+		height: 116px;
+	}
+
+	.logo-container img {
+		height: 116px;
+	}
 }
 
 .sub-menu li {
@@ -275,8 +288,8 @@ article.post {
 }
 
 .category .post-header h1 {
-	margin-top: 5px;
-	margin-bottom: 5px;
+	margin-top: auto;
+	margin-bottom: auto;
 }
 
 .category-title {
@@ -343,14 +356,17 @@ article.post {
 .main-navigation .nav.navbar-nav>li>a,
 .nav.navbar-nav>li>a,
 .nav.navbar-nav>li>a:hover,
-.nav.navbar-nav>li>a:focus {
+.nav.navbar-nav>li>a:focus,
+#footer-menu a {
 	font-family: "Amatic SC";
 	font-size: 30px;
 	background-color: #FFFFFF;
-	color: rgb(0, 0, 0);	
+	color: rgb(0, 0, 0);
+	text-decoration: none;
 }
 
-.nav.navbar-nav>li>a:hover {
+.nav.navbar-nav>li>a:hover,
+#footer-menu a:hover {
 	font-weight: 700;	
 }
 
@@ -397,6 +413,10 @@ footer #copyright {
 	float: right;
 }
 
+#footer-menu li {
+	display: inline;
+	margin-left: 20px;
+}
 
 
 /* Sidebar */

@@ -46,9 +46,13 @@
 
       <!-- retrieving logo via request -->
       <div class="site-logo">
-        <a href="<?php echo get_home_url() ?>">
-          <?php echo wp_get_attachment_image ( 86, "377 × 116" ) ?>
-        </a>
+        <div class="logo-container">
+          <a href="<?php echo get_home_url() ?>">
+            <center>
+              <?php echo wp_get_attachment_image ( 86, "377 × 116" ) ?>
+            </center>
+          </a>
+        </div>
       </div>
 
 

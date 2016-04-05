@@ -1,10 +1,9 @@
       <footer>
 <!--   <p id="copyright">&copy; <?php bloginfo( 'name' ); ?> <?php echo date('Y'); ?></p>   -->  
-      <div id="footer-menu" class="nav navbar-nav">
+      <div id="footer-menu">
 	        <?php
 		        $args = array(
 		          'menu' => 'footer-menu',
-		          'menu_class' => 'nav navbar-nav',
 		          'container' => 'false'
 		        );
 	          	wp_nav_menu ( $args );
