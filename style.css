@@ -74,13 +74,19 @@ This theme, like WordPress, is licensed under the GPL
 	font-weight: bold;
 }
 
+/* Sidebar */
+
 .sidebar {
-	margin-top: 40px;
+	margin-top: 0;
 	color: #444;
 }
 
 .sidebar h3 {
 	color: #888;
+}
+
+.sidebar-container #sb_instagram .sb_instagram_header h3 {
+	font-size: 12px;
 }
 
 .widget {
@@ -162,13 +168,6 @@ article.post {
   }
 }
 
-.front-page {
-	/* Need overflow so height works */
-	overflow: hidden;
-	background-image: url("images/testWoodBackground.jpg");
-	background-size: 100%;	
-}
-
 /* Content */
 
 .content {
@@ -181,12 +180,22 @@ article.post {
 
 /* Front page */
 
+.front-page {
+	/* Need overflow so height works */
+	overflow: hidden;
+	/*background-image: url("images/testWoodBackground.jpg");*/
+	background-size: 100%;	
+}
+
 .front-page .new-posts-container {
-	padding-top: 40px;	
+	padding-top: 10px;	
+}
+
+.front-page .post-preview:not(:first-of-type) {
+	margin-top: 25px;	
 }
 
 .front-page .post-image {
-	margin-top: 10px;
 	height: 400px;
 	width: 100%;
 	background-color: rgb(255, 255, 255);
@@ -238,6 +247,10 @@ article.post {
 	margin-right: auto;
 }
 
+.about-image {
+	text-align: center;
+}
+
 .main-navigation {
 }
 
@@ -254,75 +267,100 @@ article.post {
 
 /* Category Pages */
 
-.category {
+.category-page {
 	margin-right: auto;
 	margin-left: auto;
-	width: 90%;
 }
 
-.category .post-preview-strip {
-	display: flex;
-	display: -webkit-flex;
-	font-family: Lato;
-}
-
-.category .post-preview {
+.category-page .post-preview {
 	background-color: rgb(255, 255, 255);
 	height: 150px;
 	display: flex;
 	display: -webkit-flex;
-	font-family: Lato;	
+	font-family: Lato;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	overflow: hidden;
 }
 
-.category .post-preview-right {
+.category-page .post-preview-right {
 	-webkit-flex: 4;
 	flex: 4;
-	margin-left: 10px;
+	margin-left: 20px;
 	margin-top: 5px;
 	margin-bottom: 10px;
 }
 
-.category .post-preview-left {
+.category-page .post-preview-left {
 	-webkit-flex: 1;
 	flex: 1;	
 }
 
-.category .post-header h1 {
+.category-page .post-header h1 {
 	margin-top: auto;
 	margin-bottom: auto;
 }
 
-.category-title {
+.category-page-title {
 	margin-bottom: 20px;
 	font-family: "Amatic SC";
 }
 
-.category-title h1 {
+.category-page-title h1 {
 	font-weight: bold;
 	font-size: 50px;	
 }
 
-.category .post-preview .post-image {
+.category-page .post-preview .post-image {
 	margin-top: 0;
 	height: auto;
 	width: auto;
 }
 
-.category .post-image img {
+.category-page .post-image img {
 	width: 200px;
 	height: 140px;
 }
 
-.category .post-title {
+.category-page .post-title {
 	margin-left: 20px;
 }
 
-.category .post-date {
+.category-page .post-date {
 	margin-left: 0;
 }
 
-.category .category-title>h1 {
+.category-page .category-title>h1 {
 	margin-top: 0;
+}
+
+@media screen and (max-width: 500px) {
+	.category-page .post-preview {
+		height: 100px;
+	}
+	.category-page .post-image img {
+		width: 100px;
+		height: 70px;
+	}
+	.category-page .post-excerpt {
+		display: none;
+	}
+	
+	.category-page .post-title {
+		margin-left: 0;
+	}
+
+	.category-page .post-preview-right {
+		font-size: 12px;
+	}
+
+	.category-page .post-preview h1 {
+		display: block;
+		font-size: 28px;
+	}
+
+
+
 }
 
 /* Navbar */
@@ -367,7 +405,7 @@ article.post {
 
 .nav.navbar-nav>li>a:hover,
 #footer-menu a:hover {
-	font-weight: 700;	
+	/*font-weight: 700;	*/
 }
 
 .post-image  {

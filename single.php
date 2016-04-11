@@ -1,54 +1,68 @@
 
 <?php get_header(); ?>
 
-    <div class="container">
+        <div class="container">
 
-          <div class="single-post">
-  
-            <?php  include( get_template_directory() . '/sidebar-toggle.php'); ?>
-            
-            <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+          <div class="">
 
-              <div class="page-header">
+            <div class="single-post">
+              
+              <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-                <?php
-                  $thumbnail_id = get_post_thumbnail_id(); 
-                  $thumbnail_url = wp_get_attachment_image_src( $thumbnail_id, 'thumbnail-size', true );
-                  $thumbnail_meta = get_post_meta( $thumbnail_id, '_wp_attachment_image_alt', true );
-                ?>
                 <div class="post-image">
+                  <?php
+                    $thumbnail_id = get_post_thumbnail_id(); 
+                    $thumbnail_url = wp_get_attachment_image_src( $thumbnail_id, 'thumbnail-size', true );
+                    $thumbnail_meta = get_post_meta( $thumbnail_id, '_wp_attachment_image_alt', true );
+                  ?>                  
                   <p class="featured-image"><img src="<?php echo $thumbnail_url[0]; ?>" alt="<?php echo $thumbnail_meta; ?>"></p>
                 </div>
 
-                <h1><?php the_title(); ?></h1>
+                <div class="post-body">
 
-                <p><em>
-                    By <?php the_author(); ?> 
-                    on <?php echo the_time('l, F, jS. Y');?>
-                    in the category <?php the_category( ', '); ?>.
-                    <a href="<?php comments_link(); ?>"><?php comments_number(); ?></a>
-                </em></p>
-              </div>
+                  <div class="col-md-10">
+                  
+                    <h1><?php the_title(); ?></h1>
 
-              <?php the_content(); ?>
+                    <p>
+                      <em>
+                        By <?php the_author(); ?> 
+                        on <?php echo the_time('l, F, jS. Y');?>
+                        in the category <?php the_category( ', '); ?>.
+                        <a href="<?php comments_link(); ?>"><?php comments_number(); ?></a>
+                      </em>
+                    </p>
 
-              <hr>
+                    <?php the_content(); ?>
 
-              <?php comments_template(); ?>
+                    <?php comments_template(); ?>
 
-            <?php endwhile; else: ?>
+                  </div>
+                  
+                  <div class="col-md-2 sidebar-container">
+                    <?php get_sidebar(); ?>            
+                  </div>
 
-              <div class="page-header">
-                <h1>Oh no!</h1>
-              </div>
+                </div>
 
-            <p>No content is appearing for this page!</p>
+              <?php endwhile; else: ?>
 
-            <?php endif; ?>
+                <div class="page-header">
+                  <h1>Oh no!</h1>
+                </div>
+
+              <p>No content is appearing for this page!</p>
+
+              <?php endif; ?>
+
+            </div>
 
           </div>
-    </div>
 
-</div>
+        </div>
+
+      </div>
+
+      <hr>
 
 <?php get_footer(); ?>

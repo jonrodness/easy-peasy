@@ -4,46 +4,42 @@
   */
 ?>
 
-  <div class="container">
     <?php get_header(); ?>
 
-    <div class="main-navigation">
-      <!-- Navbar -->
-      <?php include( get_template_directory(). '/navbar.php'); ?>
-    </div>    
+        <div class="col-md-12 about-content">
 
-    <div class="row row-offcanvas row-offcanvas-right">
+          <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+           
+            <?php if ( has_post_thumbnail() ): ?>
 
-          <div class="col-md-9">
+              <div class="about-image"> 
+              
+                <?php the_post_thumbnail(); ?> 
 
-            <p class="pull-right visible-xs">
-              <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle Sidebar</button>
-            </p>
+                <?php the_content(); ?>
+              
+              </div>
 
-        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-         
-          <?php if ( has_post_thumbnail() ): ?>
+            <?php endif; ?>
 
-            <div class="about-image"> 
-            
-              <?php the_post_thumbnail(); ?> 
+          <?php endwhile; else: ?>
 
-              <?php the_content(); ?>
-            
-            </div>
-
+            <p> Sorry no content </p>
+          
           <?php endif; ?>
-
-        <?php endwhile; else: ?>
-
-          <p> Sorry no content </p>
-        
-        <?php endif; ?>
       
       </div>
 
-       <?php get_sidebar(); ?>
-
     </div>
+
+    <hr>
       
 <?php get_footer(); ?>
+
+<script>
+  var $aboutContent = $(".about-content");
+  var aboutHeight = $aboutContent.height();
+  if (aboutHeight) {
+    $(".col-md-2").css("max-height", aboutHeight);
+  }
+</script>
