@@ -12,15 +12,24 @@ Text Domain: artist_and_spoon
 This theme, like WordPress, is licensed under the GPL
 */
 
-.logo-container {
-	height: 100px;
-}
-
 .logo-container img {
-	height: 50px;
+	width: 100%;
+	height: auto;
 }
 
-@media (min-width:768px) {
+.logo-container {
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+@media screen and (min-width:315px) {
+	.logo-container {
+		width: 300px;
+	}
+}
+
+@media screen and (min-width:360px) {
 	.sub-menu {
 		display: none;
 		position: absolute;
@@ -34,13 +43,18 @@ This theme, like WordPress, is licensed under the GPL
 	}
 
 	.logo-container {
-		height: 116px;
-	}
-
-	.logo-container img {
-		height: 116px;
+		width: 350px;
 	}
 }
+
+@media screen and (min-width:520px) {
+	.logo-container {
+		width: 450px;
+	}
+}
+
+
+
 
 .sub-menu li {
 	margin-bottom: 10px;
