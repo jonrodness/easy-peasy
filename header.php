@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="<?php bloginfo('template_directory');?>/images/favicon.jpg">
     <link href='https://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'>    
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400" rel="stylesheet">
     
     <!-- Custom jQuery functions. Add to functions.php -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -28,7 +29,7 @@
         <li><a  href ="http://www.twitter.com"> <img src="<?php bloginfo('template_directory');?>/images/Social_Icons/twitter.png" /> </a></li>
         <li><a  href ="http://www.facebook.com/jenn.goodman.5?fref=ts"> <img src="<?php bloginfo('template_directory');?>/images/Social_Icons/facebook.png" /> </a></li>
         <li><a  href ="http://www.pinterest.com"> <img src="<?php bloginfo('template_directory');?>/images/Social_Icons/pinterest.png" /> </a></li>
-        <li><a  href ="http://www.instagram.com"> <img src="<?php bloginfo('template_directory');?>/images/Social_Icons/Instagram.png" /> </a></li>
+        <li><a  href ="http://www.instagram.com"> <img src="<?php bloginfo('template_directory');?>/images/Social_Icons/instagram.png" /> </a></li>
       </ul>
     </div>
 
@@ -49,7 +50,7 @@
         <div class="logo-container">
           <a href="<?php echo get_home_url() ?>">
             <center>
-              <?php echo wp_get_attachment_image ( 86, "377 × 116" ) ?>
+              <?php echo wp_get_attachment_image ( 129, "377 × 116" ) ?>
             </center>
           </a>
         </div>

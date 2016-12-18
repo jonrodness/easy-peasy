@@ -35,8 +35,6 @@
 
                     <?php the_content(); ?>
 
-                    <?php comments_template(); ?>
-
                   </div>
                   
                   <div class="col-md-2 sidebar-container">

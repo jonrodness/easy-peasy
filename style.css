@@ -1,9 +1,9 @@
 /*
-Theme Name: An Artist and her Spoon
+Theme Name: The Early Bird
 Theme URI: http://artistandherspoon.com/artist_and_her_spoon
-Author: juniper
+Author: Jon Rodness
 Author URI: http://
-Description: Theme for An Artist and her Spoon
+Description: Theme for The Early Bird Site
 Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -11,6 +11,15 @@ Text Domain: artist_and_spoon
 
 This theme, like WordPress, is licensed under the GPL
 */
+
+html, body {
+	height: 100%;
+}
+
+.container {
+	min-height: 100%;
+	position: relative;
+}
 
 .logo-container img {
 	width: 100%;
@@ -52,9 +61,6 @@ This theme, like WordPress, is licensed under the GPL
 		width: 450px;
 	}
 }
-
-
-
 
 .sub-menu li {
 	margin-bottom: 10px;
@@ -206,7 +212,7 @@ article.post {
 }
 
 .front-page .post-preview:not(:first-of-type) {
-	margin-top: 25px;	
+	margin-top: 0;	
 }
 
 .front-page .post-image {
@@ -216,23 +222,18 @@ article.post {
 }
 
 .front-page .post-image img {
-	border: solid 5px rgb(255, 255, 255);
+	/*border: solid 5px rgb(255, 255, 255);*/
 }
 
 /* Posts */
 
-.content .post-date {
-	margin-left: 20px;
-}
-
 .content .post-title {
-	margin-left: 30px;
+	margin-left: 0;
+	font-weight: bold;
 }
 
 .content .post-image img {
 	display: block;
-	width: 100%;
-	height: 100%;
 }
 
 .content .post-header {
@@ -242,12 +243,17 @@ article.post {
 .content .post-header h1 {
 	vertical-align: middle;
 	display: inline-block;
-	font-family: "Amatic SC";
-	font-size: 30px;
-	font-weight: 700;	
+	font-family: 'Raleway', sans-serif;
+	font-size: 20px;
 	color: rgb(0, 0, 0);	
-	margin-top: 10px;
-	margin-bottom: 10px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	text-transform: uppercase;
+}
+
+.content .post-header .post-date {
+	margin-left: 10px;
+	font-size: 18px;
 }
 
 /* About */
@@ -270,6 +276,7 @@ article.post {
 
 .site-logo {
 	width: 100%;
+	margin-bottom: 20px;
 }
 
 .site-logo img {
@@ -300,9 +307,9 @@ article.post {
 .category-page .post-preview-right {
 	-webkit-flex: 4;
 	flex: 4;
-	margin-left: 20px;
-	margin-top: 5px;
-	margin-bottom: 10px;
+	margin-left: 15px;
+	margin-top: 0;
+	margin-bottom: 0;
 }
 
 .category-page .post-preview-left {
@@ -317,7 +324,7 @@ article.post {
 
 .category-page-title {
 	margin-bottom: 20px;
-	font-family: "Amatic SC";
+	font-family: 'Raleway', sans-serif;
 }
 
 .category-page-title h1 {
@@ -336,17 +343,30 @@ article.post {
 	height: 140px;
 }
 
-.category-page .post-title {
-	margin-left: 20px;
+.category-page .post-date {
+	margin-left: 10px;
+	font-size: 18px;	
 }
 
-.category-page .post-date {
-	margin-left: 0;
+.category-page .category-title {
+	background-color: rgb(226, 255, 234);
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-top: 20px;
+	margin-bottom: 50px;
 }
 
 .category-page .category-title>h1 {
+	font-family: 'Raleway', sans-serif;
 	margin-top: 0;
+	margin-bottom: 0;
+	text-align: center;
+	font-size: 30px;
 }
+
+.category-page .post-excerpt {
+	margin-top: 7px;
+}	
 
 @media screen and (max-width: 500px) {
 	.category-page .post-preview {
@@ -373,8 +393,6 @@ article.post {
 		font-size: 28px;
 	}
 
-
-
 }
 
 /* Navbar */
@@ -387,6 +405,7 @@ article.post {
 }
 
 .navbar .nav {
+	border-top: 1px solid rgb(0, 0, 0); 
 	float: none;
 	display: inline-block;
 	margin: auto;
@@ -410,8 +429,8 @@ article.post {
 .nav.navbar-nav>li>a:hover,
 .nav.navbar-nav>li>a:focus,
 #footer-menu a {
-	font-family: "Amatic SC";
-	font-size: 30px;
+	font-family: 'Raleway', sans-serif;
+	font-size: 18px;
 	background-color: #FFFFFF;
 	color: rgb(0, 0, 0);
 	text-decoration: none;
@@ -456,13 +475,12 @@ article.post {
 
 /* Footer menu */
 
-footer #copyright {
-	display: inline;
+footer {
+	position: absolute;
 }
 
-#footer-menu {
-	display: inline-block;
-	float: right;
+footer #copyright {
+	display: inline;
 }
 
 #footer-menu li {
@@ -470,6 +488,9 @@ footer #copyright {
 	margin-left: 20px;
 }
 
+#menu-footer-menu {
+	padding-left: 0;
+}
 
 /* Sidebar */
 

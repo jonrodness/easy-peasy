@@ -14,15 +14,15 @@
 
             <div class="post-preview">
               <div class="post-header">
+                <a href="<?php the_permalink(); ?>">
+                  <h1 class="post-title"><?php the_title(); ?></h1>
+                </a>                
                 <h1 class="post-date">
                   <?php 
-                    $format = 'm/d/Y';
+                    $format = 'F j, Y';
                     the_date( $format ); 
                   ?>
                 </h1>
-                <a href="<?php the_permalink(); ?>">
-                  <h1 class="post-title"><?php the_title(); ?></h1>
-                </a>
               </div>
 
               <div class="post-image">

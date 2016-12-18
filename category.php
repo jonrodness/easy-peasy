@@ -23,15 +23,15 @@
 
               <div class="post-preview-right">
                 <div class="post-header">
+                  <a href="<?php the_permalink(); ?>">
+                    <h1 class="post-title"><?php the_title(); ?></h1>
+                  </a>                  
                   <h1 class="post-date">
                     <?php
-                      $format = 'm/d/Y';
+                      $format = 'F j, Y';
                       the_date( $format ); 
                     ?>
                   </h1>
-                  <a href="<?php the_permalink(); ?>">
-                    <h1 class="post-title"><?php the_title(); ?></h1>
-                  </a>
                 </div>
                 <div class="post-excerpt">
                    <?php echo get_the_excerpt() ?>
@@ -43,10 +43,8 @@
           <?php endwhile; else: ?>
 
             <div class="page-header">
-              <h3>Oh no!</h3>
+              <h3>Check back soon!</h3>
             </div>
-
-          <p>No content is appearing for this page!</p>
 
           <?php endif; ?>
 
