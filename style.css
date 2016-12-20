@@ -219,14 +219,38 @@ article.post {
 	margin-top: 0;	
 }
 
-.front-page .post-image {
-	height: 400px;
-	width: 100%;
+.front-page .post-content {
+	max-height: 350px;
+	margin-bottom: 40px;
 	background-color: rgb(255, 255, 255);
+	display: flex;
 }
 
-.front-page .post-image img {
-	/*border: solid 5px rgb(255, 255, 255);*/
+.front-page .post-content a {
+	flex: 1;
+	margin-right: 10px;
+}
+
+.front-page .post-content a {
+	max-width: 50%;	
+}
+
+.front-page .post-content img {
+	max-width: 100%;
+}
+
+.front-page .post-excerpt {
+	margin-left: 10px;
+	flex: 1;
+}
+
+.front-page .post-excerpt p {
+	margin-top: 10%;
+	text-align: center;
+}
+
+.front-page .post-header {
+	margin-bottom: 10px;
 }
 
 /* Posts */
@@ -237,6 +261,7 @@ article.post {
 
 .content .post-image img {
 	display: block;
+	max-width: 100%;
 }
 
 .content .post-header {
@@ -252,6 +277,7 @@ article.post {
 	margin-top: 5px;
 	margin-bottom: 5px;
 	text-transform: uppercase;
+	font-weight: 400;
 }
 
 .content .post-header .post-date {
@@ -281,7 +307,7 @@ article.post {
 
 .site-logo {
 	width: 100%;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 }
 
 .site-logo img {
@@ -516,6 +542,7 @@ article.post {
 
 .category-page .post-preview .post-excerpt,
 .single-post .post-body p,
+.front-page .post-excerpt,
 .about-content p {
 	font-weight: 300;
 	font-size: 16px;

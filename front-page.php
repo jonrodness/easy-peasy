@@ -16,7 +16,7 @@
               <div class="post-header">
                 <a href="<?php the_permalink(); ?>">
                   <h1 class="post-title"><?php the_title(); ?></h1>
-                </a>                
+                </a>      
                 <h1 class="post-date">
                   <?php 
                     $format = 'F j, Y';
@@ -25,11 +25,22 @@
                 </h1>
               </div>
 
-              <div class="post-image">
+              <div class="post-content">
                   <a href="<?php the_permalink(); ?>">
                     <?php the_post_thumbnail(); ?> 
                   </a>
+
+                <div class="post-excerpt">
+                   <?php echo get_the_excerpt() ?>
+                  
+                  <a href="<?php the_permalink(); ?>">
+                    <p>Read More ... </p>
+                  </a>                   
+                </div>
+
               </div>
+
+
             </div>
             
           <?php endwhile; else: ?>
