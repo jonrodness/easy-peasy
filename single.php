@@ -1,65 +1,55 @@
 
 <?php get_header(); ?>
 
-        <div class="container">
 
-          <div class="">
 
             <div class="single-post">
-              
-              <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-                <div class="post-image">
-                  <?php
-                    $thumbnail_id = get_post_thumbnail_id(); 
-                    $thumbnail_url = wp_get_attachment_image_src( $thumbnail_id, 'thumbnail-size', true );
-                    $thumbnail_meta = get_post_meta( $thumbnail_id, '_wp_attachment_image_alt', true );
-                  ?>                  
-                  <p class="featured-image"><img src="<?php echo $thumbnail_url[0]; ?>" alt="<?php echo $thumbnail_meta; ?>"></p>
-                </div>
+               <div class="col-md-10">
 
-                <div class="post-body">
+                <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-                  <div class="col-md-10">
-                  
-                    <h1><?php the_title(); ?></h1>
+                  <div class="post-image">
+                    <?php
+                      $thumbnail_id = get_post_thumbnail_id(); 
+                      $thumbnail_url = wp_get_attachment_image_src( $thumbnail_id, 'thumbnail-size', true );
+                      $thumbnail_meta = get_post_meta( $thumbnail_id, '_wp_attachment_image_alt', true );
+                    ?>                  
+                    <p class="featured-image"><img src="<?php echo $thumbnail_url[0]; ?>" alt="<?php echo $thumbnail_meta; ?>"></p>
+                  </div>
 
-                    <p>
-                      <em>
-                        By <?php the_author(); ?> 
-                        on <?php echo the_time('l, F, jS. Y');?>
-                        in the category <?php the_category( ', '); ?>.
-                        <a href="<?php comments_link(); ?>"><?php comments_number(); ?></a>
-                      </em>
-                    </p>
+                  <div class="post-body">
+
+                    <h1 class="post-date">
+                        <?php echo the_time('F j, Y');?>
+                    </h1>
+
+                    <h1 class="post-title">
+                      <?php the_title(); ?>
+                    </h1>
 
                     <?php the_content(); ?>
 
                   </div>
-                  
-                  <div class="col-md-2 sidebar-container">
-                    <?php get_sidebar(); ?>            
-                  </div>
+                              
+              </div>
 
-                </div>
+              <div class="col-md-2 sidebar-container">
+                <?php get_sidebar(); ?>            
+              </div>
 
               <?php endwhile; else: ?>
 
-                <div class="page-header">
-                  <h1>Oh no!</h1>
-                </div>
-
-              <p>No content is appearing for this page!</p>
+              <div class="page-header">
+                <h1>Check back soon!</h1>
+              </div>
 
               <?php endif; ?>
 
             </div>
 
-          </div>
-
         </div>
 
-      </div>
 
       <hr>
 

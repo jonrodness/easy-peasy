@@ -1,7 +1,7 @@
 
 <?php get_header(); ?>
             
-        <div class="category-page">
+      <div class="category-page">
 
         <div class="col-md-10">
 
@@ -23,15 +23,18 @@
 
               <div class="post-preview-right">
                 <div class="post-header">
-                  <a href="<?php the_permalink(); ?>">
-                    <h1 class="post-title"><?php the_title(); ?></h1>
-                  </a>                  
+                 
                   <h1 class="post-date">
                     <?php
                       $format = 'F j, Y';
                       the_date( $format ); 
                     ?>
                   </h1>
+
+                  <a href="<?php the_permalink(); ?>">
+                    <h1 class="post-title"><?php the_title(); ?></h1>
+                  </a> 
+                  
                 </div>
                 <div class="post-excerpt">
                    <?php echo get_the_excerpt() ?>

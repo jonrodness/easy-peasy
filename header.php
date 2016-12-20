@@ -4,13 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="<?php bloginfo('template_directory');?>/images/favicon.jpg">
-    <link href='https://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'>    
-    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400" rel="stylesheet">
+    <link rel="icon" href="<?php bloginfo('template_directory');?>/images/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">    
     
-    <!-- Custom jQuery functions. Add to functions.php -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
     <title>
       <?php wp_title( '|', true, right ); ?>
       <?php bloginfo( 'name' ); ?>
