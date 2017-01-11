@@ -207,7 +207,6 @@ article.post {
 .front-page {
 	/* Need overflow so height works */
 	overflow: hidden;
-	/*background-image: url("images/testWoodBackground.jpg");*/
 	background-size: 100%;	
 }
 
@@ -220,34 +219,47 @@ article.post {
 }
 
 .front-page .post-content {
-	max-height: 350px;
 	margin-bottom: 40px;
 	background-color: rgb(255, 255, 255);
 	display: flex;
 }
 
+@media screen and (max-width: 500px) {
+	.front-page .post-content {
+		display: block;
+	}
+
+	.front-page .post-excerpt {
+		margin-top: 20px;
+	}
+}
+
 .front-page .post-content a {
-	flex: 1;
 	margin-right: 10px;
 }
 
 .front-page .post-content a {
-	max-width: 50%;	
+	height: auto;
+}
+
+.front-page .thumbnail-container {
+	flex: 1;
+	margin-right: 15px;
 }
 
 .front-page .post-content img {
-	max-width: 100%;
-	max-height: 100%;
+	height: auto;
+	width: 100%;
 }
 
 .front-page .post-excerpt {
 	margin-left: 10px;
-	flex: 1;
+	flex: 2;
 }
 
 .front-page .post-excerpt p {
-	margin-top: 10%;
-	text-align: center;
+	margin: 0;
+	text-align: left;
 }
 
 .front-page .post-header {
@@ -275,14 +287,13 @@ article.post {
 	font-family: 'Lato', 'Arial', 'Verdana', 'Tahoma', sans-serif;
 	font-size: 20px;
 	color: rgb(0, 0, 0);	
-	margin-top: 5px;
+	margin-top: 0;
 	margin-bottom: 5px;
 	text-transform: uppercase;
 	font-weight: 400;
 }
 
 .content .post-header .post-date {
-	margin-left: 15px;
 	font-size: 13px;
 	margin-top: 0;
 	margin-bottom: 0;
@@ -330,8 +341,7 @@ article.post {
 	height: 150px;
 	display: flex;
 	display: -webkit-flex;
-	margin-top: 15px;
-	margin-bottom: 15px;
+	margin-bottom: 30px;
 	overflow: hidden;
 }
 
@@ -376,8 +386,8 @@ article.post {
 }
 
 .category-page .post-image img {
-	width: 200px;
-	height: 140px;
+	width: 100%;
+	height: auto;
 }
 
 .category-page .post-header>a {
@@ -412,14 +422,14 @@ article.post {
 
 @media screen and (max-width: 500px) {
 	.category-page .post-preview {
-		height: 100px;
+		display: block;
+		height: auto;
 	}
-	.category-page .post-image img {
-		width: 100px;
-		height: 70px;
-	}
-	.category-page .post-excerpt {
-		display: none;
+
+	.category-page .post-preview-right {
+		display: block;
+		margin-left: 0;
+		margin-top: 15px;
 	}
 	
 	.category-page .post-title {
@@ -432,7 +442,7 @@ article.post {
 
 	.category-page .post-preview h1 {
 		display: block;
-		font-size: 28px;
+		font-size: 18px;
 	}
 
 }

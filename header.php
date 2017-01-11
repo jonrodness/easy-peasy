@@ -46,7 +46,7 @@
         <div class="logo-container">
           <a href="<?php echo get_home_url() ?>">
             <center>
-              <?php echo wp_get_attachment_image ( 129, "377 × 116" ) ?>
+              <?php echo wp_get_attachment_image ( 174, "377 × 116" ) ?>
             </center>
           </a>
         </div>
