@@ -1,8 +1,6 @@
 
 <?php get_header(); ?>
 
-
-
             <div class="single-post">
 
                <div class="col-md-10">
