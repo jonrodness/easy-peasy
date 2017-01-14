@@ -69,9 +69,9 @@
         </div>
       
       </div>
-
-      <hr>
     
     </div>
+
+    <hr>
 
   <?php get_footer(); ?>

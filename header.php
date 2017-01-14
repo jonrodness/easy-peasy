@@ -22,10 +22,10 @@
     <!-- social media buttons -->
     <div class="social-nav">
       <ul>
-        <li><a  href ="http://www.twitter.com"> <img src="<?php bloginfo('template_directory');?>/images/Social_Icons/twitter.png" /> </a></li>
-        <li><a  href ="http://www.facebook.com/jenn.goodman.5?fref=ts"> <img src="<?php bloginfo('template_directory');?>/images/Social_Icons/facebook.png" /> </a></li>
-        <li><a  href ="http://www.pinterest.com"> <img src="<?php bloginfo('template_directory');?>/images/Social_Icons/pinterest.png" /> </a></li>
-        <li><a  href ="http://www.instagram.com"> <img src="<?php bloginfo('template_directory');?>/images/Social_Icons/instagram.png" /> </a></li>
+        <li><a  href ="#"> <img src="<?php bloginfo('template_directory');?>/images/Social_Icons/twitter.png" /> </a></li>
+        <li><a  href ="#"> <img src="<?php bloginfo('template_directory');?>/images/Social_Icons/facebook.png" /> </a></li>
+        <li><a  href ="#"> <img src="<?php bloginfo('template_directory');?>/images/Social_Icons/pinterest.png" /> </a></li>
+        <li><a  href ="https://www.instagram.com/jenn.easypeasy/"> <img src="<?php bloginfo('template_directory');?>/images/Social_Icons/instagram.png" /> </a></li>
       </ul>
     </div>
 

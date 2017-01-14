@@ -1,9 +1,6 @@
       <footer>
 <!--   <p id="copyright">&copy; <?php bloginfo( 'name' ); ?> <?php echo date('Y'); ?></p>   -->  
       <div id="footer-menu">
-      		<div class="footer-image">
-              <?php echo wp_get_attachment_image ( 127, "377 × 116" ) ?>
-          	</div>
 	        <?php
 		        $args = array(
 		          'menu' => 'footer-menu',
