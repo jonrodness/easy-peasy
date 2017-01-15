@@ -39,10 +39,7 @@
                   <p>
                     <?php echo get_the_excerpt() ?>
                   </p>
-                  
-                  <a href="<?php the_permalink(); ?>">
-                    <p>Read More ... </p>
-                  </a>                   
+                 
                 </div>
 
               </div>
@@ -71,7 +68,5 @@
       </div>
     
     </div>
-
-    <hr>
 
   <?php get_footer(); ?>

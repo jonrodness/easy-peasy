@@ -48,7 +48,4 @@
 
         </div>
 
-
-      <hr>
-
 <?php get_footer(); ?>

@@ -1,16 +1,20 @@
-      <footer>
-<!--   <p id="copyright">&copy; <?php bloginfo( 'name' ); ?> <?php echo date('Y'); ?></p>   -->  
-      <div id="footer-menu">
-	        <?php
-		        $args = array(
-		          'menu' => 'footer-menu',
-		          'container' => 'false'
-		        );
-	          	wp_nav_menu ( $args );
-	        ?>
-    	</div>
-      </footer>
     </div> <!-- /container -->
+
+    <div class="footer container">
+    	<hr>
+		<footer>
+		<!--   <p id="copyright">&copy; <?php bloginfo( 'name' ); ?> <?php echo date('Y'); ?></p>   -->  
+		  <div id="footer-menu">
+		      <?php
+			      $args = array(
+			        'menu' => 'footer-menu',
+			        'container' => 'false'
+			      );
+		         wp_nav_menu ( $args );
+		      ?>
+		   </div>
+		</footer>
+	</div>
 
     <?php wp_footer(); ?>
 

@@ -18,7 +18,6 @@ html, body {
 
 .container {
 	min-height: 100%;
-	height: 100%;
 	position: relative;
 }
 
@@ -35,7 +34,7 @@ html, body {
 
 @media screen and (min-width:315px) {
 	.logo-container {
-		width: 300px;
+		width: 100%;
 	}
 }
 
@@ -51,15 +50,17 @@ html, body {
 	li:hover .sub-menu {
 		display: block;
 	}
+}
 
+@media screen and (min-width: 700px) {
 	.logo-container {
-		width: 350px;
+		width: 70%;
 	}
 }
 
-@media screen and (min-width:520px) {
+@media screen and (min-width: 1000px) {
 	.logo-container {
-		width: 550px;
+		width: 60%;
 	}
 }
 
@@ -244,6 +245,7 @@ article.post {
 @media screen and (max-width: 500px) {
 	.front-page .post-content {
 		display: block;
+		height: auto;
 	}
 
 	.front-page .post-excerpt {
@@ -580,12 +582,16 @@ article.post {
 
 .about-content p {
 	margin-top: 50px;
-	width: 50%;
+	width: 70%;
 	margin-left: auto;
 	margin-right: auto;
 }
 
 /* Footer menu */
+
+.footer.container {
+	min-height: auto;
+}
 
 footer {
 	position: absolute;

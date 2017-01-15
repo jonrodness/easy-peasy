@@ -28,7 +28,17 @@ add_action( 'wp_enqueue_scripts', 'theme_js' );
 //add_filter( 'show_admin_bar', '__return_false' );
 
 add_theme_support( 'menus' );
-add_theme_support( 'post-thumbnails' ); 
+add_theme_support( 'post-thumbnails' );
+
+function wpdocs_custom_excerpt_length( $length ) {
+    return 30;
+}
+add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
+
+function wpdocs_excerpt_more( $more ) {
+    return '<span>...</span><br/><br/><a href="'.get_the_permalink().'" rel="nofollow">Read More</a>';
+}
+add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
 
 function register_theme_menus() {
 
