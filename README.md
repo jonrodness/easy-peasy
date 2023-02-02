@@ -1,2 +1,2 @@
-# artist-and-spoon
-Blogging website for Jennifer Goodman
+# Easy Peasy
+Custom lifestyle blog template for Wordpress
